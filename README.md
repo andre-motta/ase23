@@ -7,4 +7,4 @@ href="https://github.com/andre-motta/sin21/actions"><img src="https://github.com
 
 Repository for NCSU Sinless Software Engineering class CSC-791
 
-A simple documentation of the implemented functions can be found [here](https://alustos.us/sin21/simpleCalculator)
+A simple documentation of hw2 can be found [here](https://alustos.us/sin21/hw2)
