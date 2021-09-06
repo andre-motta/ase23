@@ -1,9 +1,4 @@
-from sin21.src.hw2.hw2 import Num
-import sys
-import os
-sys.path.insert(0, os.path.abspath('..'))
-from src.hw2 import hw2
-import pytest
+import hw2
 
 
 def test_Sample():
