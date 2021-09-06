@@ -1,0 +1,217 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module hw2</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>hw2</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:c%3A%5Cusers%5Candre%5Cdocuments%5Cncsu%5C791-sinless%5Csin21%5Csrc%5Chw2%5Chw2.py">c:\users\andre\documents\ncsu\791-sinless\sin21\src\hw2\hw2.py</a></font></td></tr></table>
+    <p></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="math.html">math</a><br>
+</td><td width="25%" valign=top><a href="random.html">random</a><br>
+</td><td width="25%" valign=top><a href="re.html">re</a><br>
+</td><td width="25%" valign=top></td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ee77aa">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Classes</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl>
+<dt><font face="helvetica, arial"><a href="builtins.html#object">builtins.object</a>
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="hw2.html#Col">Col</a>
+</font></dt><dt><font face="helvetica, arial"><a href="hw2.html#Num">Num</a>
+</font></dt><dt><font face="helvetica, arial"><a href="hw2.html#Sample">Sample</a>
+</font></dt><dt><font face="helvetica, arial"><a href="hw2.html#Sym">Sym</a>
+</font></dt></dl>
+</dd>
+</dl>
+ <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Col">class <strong>Col</strong></a>(<a href="builtins.html#object">builtins.object</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt><a href="#Col">Col</a>(oid,&nbsp;txt,&nbsp;obj,&nbsp;isnum)<br>
+&nbsp;<br>
+#&nbsp;<a href="#Col">Col</a>&nbsp;class&nbsp;keeps&nbsp;information&nbsp;on&nbsp;the&nbsp;columns<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="Col-__add__"><strong>__add__</strong></a>(self, v)</dt></dl>
+
+<dl><dt><a name="Col-__init__"><strong>__init__</strong></a>(self, oid, txt, obj, isnum)</dt><dd><tt>Initialize&nbsp;self.&nbsp;&nbsp;See&nbsp;help(type(self))&nbsp;for&nbsp;accurate&nbsp;signature.</tt></dd></dl>
+
+<dl><dt><a name="Col-__sub__"><strong>__sub__</strong></a>(self, v)</dt></dl>
+
+<dl><dt><a name="Col-variety"><strong>variety</strong></a>(self)</dt></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Num">class <strong>Num</strong></a>(<a href="builtins.html#object">builtins.object</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt><a href="#Num">Num</a>(data=None)<br>
+&nbsp;<br>
+#&nbsp;<a href="#Sym">Sym</a>&nbsp;class&nbsp;represents&nbsp;the&nbsp;numeric&nbsp;information<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="Num-__add__"><strong>__add__</strong></a>(self, v)</dt></dl>
+
+<dl><dt><a name="Num-__init__"><strong>__init__</strong></a>(self, data=None)</dt><dd><tt>Initialize&nbsp;self.&nbsp;&nbsp;See&nbsp;help(type(self))&nbsp;for&nbsp;accurate&nbsp;signature.</tt></dd></dl>
+
+<dl><dt><a name="Num-__sub__"><strong>__sub__</strong></a>(self, v)</dt></dl>
+
+<dl><dt><a name="Num-numNorm"><strong>numNorm</strong></a>(self, x)</dt></dl>
+
+<dl><dt><a name="Num-variety"><strong>variety</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Num-xpect"><strong>xpect</strong></a>(self, j)</dt></dl>
+
+<hr>
+Static methods defined here:<br>
+<dl><dt><a name="Num-numlike"><strong>numlike</strong></a>(self, x)</dt></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>hi</strong> = -inf</dl>
+
+<dl><dt><strong>lo</strong> = inf</dl>
+
+<dl><dt><strong>m2</strong> = 0</dl>
+
+<dl><dt><strong>mu</strong> = 0</dl>
+
+<dl><dt><strong>n</strong> = 0</dl>
+
+<dl><dt><strong>sd</strong> = 0</dl>
+
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Sample">class <strong>Sample</strong></a>(<a href="builtins.html#object">builtins.object</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt><a href="#Sample">Sample</a>(oid)<br>
+&nbsp;<br>
+#&nbsp;<a href="#Sample">Sample</a>&nbsp;class&nbsp;keeps&nbsp;a&nbsp;bundle&nbsp;of&nbsp;columns<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="Sample-__add__"><strong>__add__</strong></a>(self, line)</dt></dl>
+
+<dl><dt><a name="Sample-__init__"><strong>__init__</strong></a>(self, oid)</dt><dd><tt>Initialize&nbsp;self.&nbsp;&nbsp;See&nbsp;help(type(self))&nbsp;for&nbsp;accurate&nbsp;signature.</tt></dd></dl>
+
+<dl><dt><a name="Sample-convert"><strong>convert</strong></a>(self, x)</dt></dl>
+
+<dl><dt><a name="Sample-create_cols"><strong>create_cols</strong></a>(self, line)</dt></dl>
+
+<dl><dt><a name="Sample-dump"><strong>dump</strong></a>(self, filename='tabledump.txt')</dt></dl>
+
+<dl><dt><a name="Sample-insert_row"><strong>insert_row</strong></a>(self, line)</dt></dl>
+
+<hr>
+Static methods defined here:<br>
+<dl><dt><a name="Sample-compiler"><strong>compiler</strong></a>(x)</dt></dl>
+
+<dl><dt><a name="Sample-linemaker"><strong>linemaker</strong></a>(src, sep=',', doomed='([\\n\\t\\r ]|#.*)')</dt></dl>
+
+<dl><dt><a name="Sample-read"><strong>read</strong></a>(file)</dt></dl>
+
+<dl><dt><a name="Sample-string"><strong>string</strong></a>(s)</dt></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Sym">class <strong>Sym</strong></a>(<a href="builtins.html#object">builtins.object</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt><a href="#Sym">Sym</a>(data=None)<br>
+&nbsp;<br>
+<a href="#Sym">Sym</a>&nbsp;class&nbsp;represents&nbsp;the&nbsp;symbolic&nbsp;information<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="Sym-__add__"><strong>__add__</strong></a>(self, v)</dt><dd><tt>Add&nbsp;method&nbsp;for&nbsp;<a href="#Sym">Sym</a></tt></dd></dl>
+
+<dl><dt><a name="Sym-__init__"><strong>__init__</strong></a>(self, data=None)</dt><dd><tt>Construct&nbsp;a&nbsp;new&nbsp;<a href="#Sym">Sym</a>&nbsp;<a href="builtins.html#object">object</a></tt></dd></dl>
+
+<dl><dt><a name="Sym-__sub__"><strong>__sub__</strong></a>(self, x)</dt></dl>
+
+<dl><dt><a name="Sym-symany"><strong>symany</strong></a>(self, without)</dt></dl>
+
+<dl><dt><a name="Sym-syment"><strong>syment</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Sym-variety"><strong>variety</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Sym-xpect"><strong>xpect</strong></a>(self, j)</dt></dl>
+
+<hr>
+Static methods defined here:<br>
+<dl><dt><a name="Sym-symlike"><strong>symlike</strong></a>(self, x, prior, m)</dt></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>mode</strong> = ''</dl>
+
+<dl><dt><strong>most</strong> = 0</dl>
+
+<dl><dt><strong>n</strong> = 0</dl>
+
+</td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#eeaa77">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Functions</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#eeaa77"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt><a name="-main"><strong>main</strong></a>()</dt><dd><tt>#&nbsp;Experiment&nbsp;ran&nbsp;in&nbsp;00.31s&nbsp;for&nbsp;pom3a.txt</tt></dd></dl>
+ <dl><dt><a name="-r"><strong>r</strong></a> = random()<font color="#909090"><font face="helvetica, arial"> method of <a href="random.html#Random">random.Random</a> instance</font></font></dt><dd><tt>random()&nbsp;-&gt;&nbsp;x&nbsp;in&nbsp;the&nbsp;interval&nbsp;[0,&nbsp;1).</tt></dd></dl>
+</td></tr></table>
+</body></html>
