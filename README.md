@@ -9,3 +9,6 @@ Repository for NCSU Sinless Software Engineering class CSC-791
 
 * A simple documentation of hw2 can be found [here](https://alustos.us/sin21/hw2)
 * A simple documentation of hw3 can be found [here](https://alustos.us/sin21/hw3)
+
+![Waiting for github-pages to get back online](https://user-images.githubusercontent.com/30708955/132240323-13595c5a-a042-4298-97b2-b84ccbfa0aa8.png)
+
