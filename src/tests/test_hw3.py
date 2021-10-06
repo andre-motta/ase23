@@ -7,17 +7,17 @@ def test_Sample():
 
 
 def test_Num():
-    num = hw3.Num()
+    num = hw3.Num(0, 'e')
     assert num.n == 0, "test failed"
 
 
 def test_Sym():
-    sym = hw3.Sym()
+    sym = hw3.Sym(0, 'e')
     assert sym.n == 0, "test failed"
 
 
 def test_Col():
-    col = hw3.Col(0, 'e', hw3.Sym(),True)
+    col = hw3.Col(0, 'e', hw3.Sym(0, 'e'),True)
     assert col.oid == 0, "test failed"
 
 def test_Clone():
