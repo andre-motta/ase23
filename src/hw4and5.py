@@ -15,6 +15,199 @@ This code reads allows users to read in a csv file,
 and retain information on classes, weights, numbers, 
 symbols and goals.
 
+HW4 & 5
+Task 1:
+|.. n=398 c= 0.94
+|.. |.. n=199 c= 0.64
+|.. |.. |.. n=99 c= 0.64
+|.. |.. |.. |.. n=49 c= 0.32
+|.. |.. |.. |.. |.. n=24 c= 0.25
+|.. |.. |.. |.. |.. |.. n=12 c= 0.24     goals = [ 2419.5, 15.2, 30.0]
+|.. |.. |.. |.. |.. |.. n=12 c= 0.20     goals = [ 1985.0, 17.1, 30.0]
+|.. |.. |.. |.. |.. n=25 c= 0.23
+|.. |.. |.. |.. |.. |.. n=12 c= 0.20     goals = [ 2177.5, 16.9, 30.0]
+|.. |.. |.. |.. |.. |.. n=13 c= 0.06     goals = [ 1985.0, 16.9, 40.0]
+|.. |.. |.. |.. n=50 c= 0.49
+|.. |.. |.. |.. |.. n=25 c= 0.50
+|.. |.. |.. |.. |.. |.. n=12 c= 0.47     goals = [ 2283.0, 14.8, 30.0]
+|.. |.. |.. |.. |.. |.. n=13 c= 0.18     goals = [ 2124.0, 17.0, 30.0]
+|.. |.. |.. |.. |.. n=25 c= 0.20
+|.. |.. |.. |.. |.. |.. n=12 c= 0.13     goals = [ 2156.0, 18.5, 30.0]
+|.. |.. |.. |.. |.. |.. n=13 c= 0.17     goals = [ 2219.0, 15.5, 30.0]
+|.. |.. |.. n=100 c= 0.65
+|.. |.. |.. |.. n=50 c= 0.54
+|.. |.. |.. |.. |.. n=25 c= 0.54
+|.. |.. |.. |.. |.. |.. n=12 c= 0.54     goals = [ 2207.5, 14.9, 30.0]
+|.. |.. |.. |.. |.. |.. n=13 c= 0.20     goals = [ 2125.0, 15.9, 30.0]
+|.. |.. |.. |.. |.. n=25 c= 0.17
+|.. |.. |.. |.. |.. |.. n=12 c= 0.15     goals = [ 2652.5, 15.8, 30.0]
+|.. |.. |.. |.. |.. |.. n=13 c= 0.05     goals = [ 2625.0, 17.3, 30.0]
+|.. |.. |.. |.. n=50 c= 0.65
+|.. |.. |.. |.. |.. n=25 c= 0.57
+|.. |.. |.. |.. |.. |.. n=12 c= 0.55     goals = [ 2249.5, 17.6, 30.0]
+|.. |.. |.. |.. |.. |.. n=13 c= 0.45     goals = [ 2500.0, 15.8, 30.0]
+|.. |.. |.. |.. |.. n=25 c= 0.28
+|.. |.. |.. |.. |.. |.. n=12 c= 0.22     goals = [ 2849.0, 15.6, 20.0]
+|.. |.. |.. |.. |.. |.. n=13 c= 0.12     goals = [ 1990.0, 14.9, 30.0]
+|.. |.. n=199 c= 0.70
+|.. |.. |.. n=99 c= 0.58
+|.. |.. |.. |.. n=49 c= 0.56
+|.. |.. |.. |.. |.. n=24 c= 0.52
+|.. |.. |.. |.. |.. |.. n=12 c= 0.46     goals = [ 3070.5, 16.2, 20.0]
+|.. |.. |.. |.. |.. |.. n=12 c= 0.38     goals = [ 3208.5, 15.8, 20.0]
+|.. |.. |.. |.. |.. n=25 c= 0.40
+|.. |.. |.. |.. |.. |.. n=12 c= 0.39     goals = [ 2245.0, 16.5, 25.0]
+|.. |.. |.. |.. |.. |.. n=13 c= 0.28     goals = [ 2634.0, 15.5, 20.0]
+|.. |.. |.. |.. n=50 c= 0.40
+|.. |.. |.. |.. |.. n=25 c= 0.32
+|.. |.. |.. |.. |.. |.. n=12 c= 0.24     goals = [ 2860.0, 15.9, 20.0]
+|.. |.. |.. |.. |.. |.. n=13 c= 0.25     goals = [ 3245.0, 16.6, 20.0]
+|.. |.. |.. |.. |.. n=25 c= 0.22
+|.. |.. |.. |.. |.. |.. n=12 c= 0.22     goals = [ 3472.5, 16.6, 20.0]
+|.. |.. |.. |.. |.. |.. n=13 c= 0.10     goals = [ 3264.0, 17.8, 20.0]
+|.. |.. |.. n=100 c= 0.52
+|.. |.. |.. |.. n=50 c= 0.29
+|.. |.. |.. |.. |.. n=25 c= 0.23
+|.. |.. |.. |.. |.. |.. n=12 c= 0.21     goals = [ 4365.0, 10.0, 10.0]
+|.. |.. |.. |.. |.. |.. n=13 c= 0.16     goals = [ 4668.0, 11.5, 10.0]
+|.. |.. |.. |.. |.. n=25 c= 0.19
+|.. |.. |.. |.. |.. |.. n=12 c= 0.15     goals = [ 3792.5, 12.0, 15.0]
+|.. |.. |.. |.. |.. |.. n=13 c= 0.14     goals = [ 4274.0, 13.0, 10.0]
+|.. |.. |.. |.. n=50 c= 0.35
+|.. |.. |.. |.. |.. n=25 c= 0.30
+|.. |.. |.. |.. |.. |.. n=12 c= 0.16     goals = [ 4110.0, 13.2, 20.0]
+|.. |.. |.. |.. |.. |.. n=13 c= 0.20     goals = [ 3725.0, 15.0, 20.0]
+|.. |.. |.. |.. |.. n=25 c= 0.20
+|.. |.. |.. |.. |.. |.. n=12 c= 0.13     goals = [ 4215.0, 13.3, 10.0]
+|.. |.. |.. |.. |.. |.. n=13 c= 0.11     goals = [ 4098.0, 14.0, 10.0]
+|.. n=398 c= 0.91
+|.. |.. n=199 c= 0.73
+|.. |.. |.. n=99 c= 0.56
+|.. |.. |.. |.. n=49 c= 0.56
+|.. |.. |.. |.. |.. n=24 c= 0.26
+|.. |.. |.. |.. |.. |.. n=12 c= 0.15     goals = [ 1985.0, 16.9, 30.0]
+|.. |.. |.. |.. |.. |.. n=12 c= 0.18     goals = [ 2283.5, 16.5, 25.0]
+|.. |.. |.. |.. |.. n=25 c= 0.46
+|.. |.. |.. |.. |.. |.. n=12 c= 0.47     goals = [ 2130.0, 15.2, 30.0]
+|.. |.. |.. |.. |.. |.. n=13 c= 0.13     goals = [ 2511.0, 15.5, 20.0]
+|.. |.. |.. |.. n=50 c= 0.34
+|.. |.. |.. |.. |.. n=25 c= 0.25
+|.. |.. |.. |.. |.. |.. n=12 c= 0.25     goals = [ 3045.0, 15.9, 25.0]
+|.. |.. |.. |.. |.. |.. n=13 c= 0.16     goals = [ 2130.0, 15.8, 40.0]
+|.. |.. |.. |.. |.. n=25 c= 0.19
+|.. |.. |.. |.. |.. |.. n=12 c= 0.17     goals = [ 1945.0, 15.4, 30.0]
+|.. |.. |.. |.. |.. |.. n=13 c= 0.13     goals = [ 2464.0, 15.5, 20.0]
+|.. |.. |.. n=100 c= 0.64
+|.. |.. |.. |.. n=50 c= 0.65
+|.. |.. |.. |.. |.. n=25 c= 0.60
+|.. |.. |.. |.. |.. |.. n=12 c= 0.59     goals = [ 2640.0, 14.6, 25.0]
+|.. |.. |.. |.. |.. |.. n=13 c= 0.14     goals = [ 2350.0, 15.0, 30.0]
+|.. |.. |.. |.. |.. n=25 c= 0.50
+|.. |.. |.. |.. |.. |.. n=12 c= 0.47     goals = [ 2052.5, 18.0, 35.0]
+|.. |.. |.. |.. |.. |.. n=13 c= 0.08     goals = [ 1995.0, 16.9, 30.0]
+|.. |.. |.. |.. n=50 c= 0.47
+|.. |.. |.. |.. |.. n=25 c= 0.45
+|.. |.. |.. |.. |.. |.. n=12 c= 0.36     goals = [ 2659.0, 16.4, 30.0]
+|.. |.. |.. |.. |.. |.. n=13 c= 0.37     goals = [ 2625.0, 16.4, 30.0]
+|.. |.. |.. |.. |.. n=25 c= 0.23
+|.. |.. |.. |.. |.. |.. n=12 c= 0.13     goals = [ 2137.5, 15.2, 30.0]
+|.. |.. |.. |.. |.. |.. n=13 c= 0.15     goals = [ 2230.0, 15.9, 30.0]
+|.. |.. n=199 c= 0.70
+|.. |.. |.. n=99 c= 0.58
+|.. |.. |.. |.. n=49 c= 0.56
+|.. |.. |.. |.. |.. n=24 c= 0.52
+|.. |.. |.. |.. |.. |.. n=12 c= 0.52     goals = [ 3061.5, 15.8, 20.0]
+|.. |.. |.. |.. |.. |.. n=12 c= 0.08     goals = [ 3199.5, 16.5, 20.0]
+|.. |.. |.. |.. |.. n=25 c= 0.40
+|.. |.. |.. |.. |.. |.. n=12 c= 0.39     goals = [ 2245.0, 16.5, 25.0]
+|.. |.. |.. |.. |.. |.. n=13 c= 0.28     goals = [ 2634.0, 15.5, 20.0]
+|.. |.. |.. |.. n=50 c= 0.40
+|.. |.. |.. |.. |.. n=25 c= 0.26
+|.. |.. |.. |.. |.. |.. n=12 c= 0.13     goals = [ 3002.5, 16.5, 20.0]
+|.. |.. |.. |.. |.. |.. n=13 c= 0.26     goals = [ 3410.0, 17.2, 20.0]
+|.. |.. |.. |.. |.. n=25 c= 0.25
+|.. |.. |.. |.. |.. |.. n=12 c= 0.24     goals = [ 3041.0, 17.1, 20.0]
+|.. |.. |.. |.. |.. |.. n=13 c= 0.08     goals = [ 3459.0, 16.9, 20.0]
+|.. |.. |.. n=100 c= 0.52
+|.. |.. |.. |.. n=50 c= 0.28
+|.. |.. |.. |.. |.. n=25 c= 0.21
+|.. |.. |.. |.. |.. |.. n=12 c= 0.19     goals = [ 4423.5, 10.5, 10.0]
+|.. |.. |.. |.. |.. |.. n=13 c= 0.15     goals = [ 4385.0, 12.0, 10.0]
+|.. |.. |.. |.. |.. n=25 c= 0.16
+|.. |.. |.. |.. |.. |.. n=12 c= 0.14     goals = [ 4328.5, 13.0, 10.0]
+|.. |.. |.. |.. |.. |.. n=13 c= 0.15     goals = [ 3693.0, 12.0, 20.0]
+|.. |.. |.. |.. n=50 c= 0.34
+|.. |.. |.. |.. |.. n=25 c= 0.22
+|.. |.. |.. |.. |.. |.. n=12 c= 0.14     goals = [ 4070.0, 13.8, 10.0]
+|.. |.. |.. |.. |.. |.. n=13 c= 0.11     goals = [ 4380.0, 13.2, 10.0]
+|.. |.. |.. |.. |.. n=25 c= 0.26
+|.. |.. |.. |.. |.. |.. n=12 c= 0.21     goals = [ 4097.5, 13.1, 20.0]
+|.. |.. |.. |.. |.. |.. n=13 c= 0.17     goals = [ 3830.0, 14.3, 20.0]
+
+Task 2:
+Weight-     Acceleration+     Mpg+     
+2052.5      18.0              35.0      <== best
+2130.0      15.8              40.0
+1985.0      16.9              30.0
+1995.0      16.9              30.0
+1945.0      15.4              30.0
+2130.0      15.2              30.0
+2137.5      15.2              30.0
+2230.0      15.9              30.0
+2350.0      15.0              30.0
+2625.0      16.4              30.0
+2659.0      16.4              30.0
+2245.0      16.5              25.0
+2283.5      16.5              25.0
+2640.0      14.6              25.0
+2464.0      15.5              20.0
+2511.0      15.5              20.0
+3045.0      15.9              25.0
+3041.0      17.1              20.0
+2634.0      15.5              20.0
+3002.5      16.5              20.0
+3199.5      16.5              20.0
+3410.0      17.2              20.0
+3061.5      15.8              20.0
+3459.0      16.9              20.0
+3830.0      14.3              20.0
+3693.0      12.0              20.0
+4097.5      13.1              20.0
+4070.0      13.8              10.0
+4328.5      13.0              10.0
+4380.0      13.2              10.0
+4385.0      12.0              10.0
+4423.5      10.5              10.0      <== worst
+
+Task 3:
+{at:1, txt:Displacement, lo:85, hi:91, best:9, rest:0}
+{at:1, txt:Displacement, lo:97, hi:400, best:3, rest:3}
+{at:1, txt:Displacement, lo:429, hi:455, best:0, rest:9}
+
+{at:2, txt:Horsepower, lo:52, hi:65, best:7, rest:0}
+{at:2, txt:Horsepower, lo:67, hi:97, best:5, rest:0}
+{at:2, txt:Horsepower, lo:167, hi:208, best:0, rest:5}
+{at:2, txt:Horsepower, lo:215, hi:230, best:0, rest:7}
+
+{at:6, txt:origin, lo:1, hi:1, best:1, rest:12}
+{at:6, txt:origin, lo:3, hi:3, best:11, rest:0}
+
+Task 4:
+Best
+best ['4', '85', '52', '2035', '22.2', '76', '1', '30']
+best ['4', '119', '97', '2545', '17', '75', '3', '20']
+best ['4', '97', '75', '2265', '18.2', '77', '3', '30']
+best ['4', '98', '68', '2135', '16.6', '78', '3', '30']
+best ['4', '85', '70', '2070', '18.6', '78', '3', '40']
+best ['4', '85', '65', '2020', '19.2', '79', '3', '30']
+
+worst ['8', '455', '225', '4951', '11', '73', '1', '10']
+worst ['8', '440', '215', '4735', '11', '73', '1', '10']
+worst ['8', '429', '198', '4952', '11.5', '73', '1', '10']
+worst ['8', '400', '230', '4278', '9.5', '73', '1', '20']
+worst ['8', '429', '208', '4633', '11', '72', '1', '10']
+worst ['8', '455', '225', '4425', '10', '70', '1', '10']
+
 """
 
 #Based on class o by Tim Menzies
@@ -23,7 +216,7 @@ class Bag:
         self.__dict__.update(kwargs)
     
     def __repr__(self):
-        return "{"+ ', '.join([f"{k}:{v}" for k, v in self.__dict__.items() if  k[0] != "_"]) + "}"
+        return "{"+ ', '.join([f"{k}:{v}" for k, v in list(self.__dict__.items())[:-2] if  k[0] != "_"]) + "}"
     
     def __getitem__(self, key):
         return self.__dict__.get(key)
@@ -38,21 +231,6 @@ def park_miller(seed,start,end):
     while True:
         seed = (16807*seed) % 2147483647
         yield  a * seed +b
-
-def argsort(list, *, key = None, reverse = False):
-    new_list = [[i, e] for i, e in enumerate(list)]
-
-    if key is None:
-        fun = lambda r : r[1]
-    else:
-        fun = lambda r : key(r[1])
-    
-    new_list.sort(key = fun, reverse=reverse)
-    arg = [ i for i, _ in new_list ]
-    return arg
-
-def sortarg(list, arg):
-    return [ list[i] for i in arg ]
 
 def var(items):
     n = len(items)
@@ -116,14 +294,15 @@ class Sym:
     """
     Sym class represents the symbolic information
     """
-    n=0
-    most = 0
-    mode = ""
+    
 
     def __init__(self,oid,txt, data=None):
         """
         construct a new Sym object
         """
+        self.n = 0
+        self.most = 0
+        self.mode = ""
         self.oid = oid
         self.txt = txt
         self.cnt = defaultdict(int)
@@ -203,27 +382,28 @@ class Sym:
 
     def discretize(self, other):
         for val in set(self.cnt.keys() | other.cnt.keys()):
-            yield Bag( oid = self.oid, txt = self.txt, lo = val, hi = val,
-                    best = self.get(val), bests = self.n,
-                    rest = other.get(val), rests = other.n,
+            yield Bag( at = self.oid-1, txt = self.txt, lo = val, hi = val,
+                    best = self.get(val),
+                    rest = other.get(val),
                     first = False, last = False )
 
 class Num:
     """
     Num class represents the numeric information
     """
-    n = 0
-    mu = 0
-    m2 = 0
-    sd = 0
-    lo = float('inf')
-    hi = -float('inf')
-    val = []
+    
 
     def __init__(self, oid, txt, data=None):
         """
         construct a new Num object
         """
+        self.n = 0
+        self.mu = 0
+        self.m2 = 0
+        self.sd = 0
+        self.lo = float('inf')
+        self.hi = -float('inf')
+        self.val = []
         self.oid = oid
         self.txt = txt
         if data != None:
@@ -279,6 +459,7 @@ class Num:
         add method for Sym
         """
         self.n += 1
+        self.val.append(v)
         if v < self.lo:
             self.lo = v
         if v > self.hi:
@@ -315,14 +496,15 @@ class Num:
         n1 = self.n
         n2 = other.n
         iota = cohen * (self.sd*n1 + other.sd*n2) / (n1 + n2)
-        ranges = merge(unsuper(X, iota, math.sqrt(len(X))))
+        clusters = unsuper(X, iota, math.sqrt(len(X)))
+        ranges = merge(clusters)
         
         if len(ranges) > 1:
             for n, r in enumerate(ranges):
                 counts = [x[1] for x in r]
-                yield Bag( oid = self.oid, txt = self.txt, lo = r[0][0], hi = r[-1][0],
-                        best = counts.count(1), bests = n1,
-                        rest = counts.count(0), rests = n2,
+                yield Bag( at = self.oid-1, txt = self.txt, lo = r[0][0], hi = r[-1][0],
+                        best = sum(1 for x in counts if x == 1), 
+                        rest = sum(1 for x in counts if x == 0),
                         first = (n == 0), last = (n == len(ranges)))
 
 class Col:
@@ -404,8 +586,6 @@ class Sample:
                     lines.append(curline)
                     curline = ""
         return lines
-
-    
 
     @staticmethod
     def linemaker(src, sep=",", doomed=r'([\n\t\r ]|#.*)'):
@@ -504,6 +684,43 @@ class Sample:
         self.quickSort(self.rows,0,len(self.rows)-1)
         return self.rows
 
+    def idxPartition(self, arr, low, high):
+        """
+        partition for quicksort
+        """
+        i = (low-1)         # index of smaller element
+        pivot = arr[high][1]     # pivot
+    
+        for j in range(low, high):
+    
+            # If current element is smaller than or
+            # equal to pivot
+            if self.zitler(arr[j][1], pivot):
+    
+                # increment index of smaller element
+                i = i+1
+                arr[i], arr[j] = arr[j], arr[i]
+    
+        arr[i+1], arr[high] = arr[high], arr[i+1]
+        return (i+1)
+    
+    def idxQuickSort(self,arr, low, high):
+        """
+        quickSort function using zitler's continuous domination predicate
+        """
+        if len(arr) == 1:
+            return arr
+        if low < high:
+    
+            # pi is partitioning index, arr[p] is now
+            # at right place
+            pi = self.idxPartition(arr, low, high)
+    
+            # Separately sort elements before
+            # partition and after partition
+            self.idxQuickSort(arr, low, pi-1)
+            self.idxQuickSort(arr, pi+1, high)
+
     def convert(self, x):
         """
         automatic type conversion for a Sample
@@ -562,6 +779,7 @@ class Sample:
             if index + 1 not in self.skip:
                 if val == "?":
                     realline.append(val)
+                    realindex +=1
                     continue
                 self.cols[realindex].obj + self.convert(val)
                 realline.append(val)
@@ -717,7 +935,7 @@ class Sample:
         returns a clone of a Sample
         """
         new = Sample(self.oid)
-        new.cols = self.cols
+        new.create_cols(self.header)
         new.x = self.x
         new.y = self.y
         new.xnums = self.xnums
@@ -746,11 +964,9 @@ class Sample:
         for i, g in enumerate(groups):
             for c in self.y:
                 repr[i][c - 1] = g.s_median(c)
-        
-        fun = lambda r1, r2: self.zitler(r1, r2)
-        order = argsort(repr, key = cmp_to_key(fun), reverse = False)
-        ordered_groups = sortarg(groups, order)
-
+        new_list = [[i,x] for i,x in enumerate(repr)]
+        self.idxQuickSort(new_list, 0, len(new_list)-1)
+        ordered_groups = [groups[i] for i, _ in new_list]
         # Fourth, if verbose, we show the results
         self._print_groups(ordered_groups)
 
@@ -795,8 +1011,9 @@ class Sample:
             b = self.dist(A, C) 
             proj = (b**2 + c**2 - a**2) / (2*c)
             projection.append(proj)
-        order = argsort(projection)
-        sorted = sortarg(rows, order)
+        new_list = [[i,x] for i,x in enumerate(projection)]
+        new_list.sort(key=lambda x: x[1])
+        sorted = [rows[i] for i, _ in new_list]
         mid = len(sorted) // 2
         return sorted[:mid], sorted[mid:]
 
@@ -826,7 +1043,7 @@ class Sample:
         text += f"n={len(rows)} c={self.calc_c(rows) : .2f}"
         text += " " * 5
         text += "goals = ["
-        if self.klass is not -1:
+        if self.klass != -1:
             text += "-"
         elif len(self.y) > 0:
             data = self.s_goals(rows)
@@ -876,20 +1093,20 @@ class Sample:
         self._show_discretized_ranges(feature_ranges, best, worst)
 
         return feature_ranges
-
         
     def _show_discretized_ranges(self, feature_ranges, best, worst):
-        for range in feature_ranges:
-            for r in range:
+        for rang in feature_ranges:
+            for r in rang:
                 print(r)
             print("")
 
         # Show some values from best and worst
         print("Best")
-        print(best)
+        for i in range(min(6, len(best.rows))):
+            print("best", best.rows[i])
         print()
-        print("Worst")
-        print(worst)
+        for i in range(min(6, len(worst.rows))):
+            print("worst", worst.rows[i])
 
     def calc_c(self, rows = None):
         rows = self.rows if rows is None else rows
@@ -909,7 +1126,7 @@ def main():
     for l in ls:
         sample + l
     g = sample.divs()
-    sample.dump()
+    # sample.dump()
     sample.discretize()
 
 
