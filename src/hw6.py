@@ -9,206 +9,7 @@ r = random.random
 seed = random.seed
 from random import sample
 from functools import cmp_to_key
-
-"""
-This code reads allows users to read in a csv file, 
-and retain information on classes, weights, numbers, 
-symbols and goals.
-
-HW4 & 5
-Task 1:
-|.. n=398 c= 0.94
-|.. |.. n=199 c= 0.64
-|.. |.. |.. n=99 c= 0.64
-|.. |.. |.. |.. n=49 c= 0.32
-|.. |.. |.. |.. |.. n=24 c= 0.25
-|.. |.. |.. |.. |.. |.. n=12 c= 0.24     goals = [ 2419.5, 15.2, 30.0]
-|.. |.. |.. |.. |.. |.. n=12 c= 0.20     goals = [ 1985.0, 17.1, 30.0]
-|.. |.. |.. |.. |.. n=25 c= 0.23
-|.. |.. |.. |.. |.. |.. n=12 c= 0.20     goals = [ 2177.5, 16.9, 30.0]
-|.. |.. |.. |.. |.. |.. n=13 c= 0.06     goals = [ 1985.0, 16.9, 40.0]
-|.. |.. |.. |.. n=50 c= 0.49
-|.. |.. |.. |.. |.. n=25 c= 0.50
-|.. |.. |.. |.. |.. |.. n=12 c= 0.47     goals = [ 2283.0, 14.8, 30.0]
-|.. |.. |.. |.. |.. |.. n=13 c= 0.18     goals = [ 2124.0, 17.0, 30.0]
-|.. |.. |.. |.. |.. n=25 c= 0.20
-|.. |.. |.. |.. |.. |.. n=12 c= 0.13     goals = [ 2156.0, 18.5, 30.0]
-|.. |.. |.. |.. |.. |.. n=13 c= 0.17     goals = [ 2219.0, 15.5, 30.0]
-|.. |.. |.. n=100 c= 0.65
-|.. |.. |.. |.. n=50 c= 0.54
-|.. |.. |.. |.. |.. n=25 c= 0.54
-|.. |.. |.. |.. |.. |.. n=12 c= 0.54     goals = [ 2207.5, 14.9, 30.0]
-|.. |.. |.. |.. |.. |.. n=13 c= 0.20     goals = [ 2125.0, 15.9, 30.0]
-|.. |.. |.. |.. |.. n=25 c= 0.17
-|.. |.. |.. |.. |.. |.. n=12 c= 0.15     goals = [ 2652.5, 15.8, 30.0]
-|.. |.. |.. |.. |.. |.. n=13 c= 0.05     goals = [ 2625.0, 17.3, 30.0]
-|.. |.. |.. |.. n=50 c= 0.65
-|.. |.. |.. |.. |.. n=25 c= 0.57
-|.. |.. |.. |.. |.. |.. n=12 c= 0.55     goals = [ 2249.5, 17.6, 30.0]
-|.. |.. |.. |.. |.. |.. n=13 c= 0.45     goals = [ 2500.0, 15.8, 30.0]
-|.. |.. |.. |.. |.. n=25 c= 0.28
-|.. |.. |.. |.. |.. |.. n=12 c= 0.22     goals = [ 2849.0, 15.6, 20.0]
-|.. |.. |.. |.. |.. |.. n=13 c= 0.12     goals = [ 1990.0, 14.9, 30.0]
-|.. |.. n=199 c= 0.70
-|.. |.. |.. n=99 c= 0.58
-|.. |.. |.. |.. n=49 c= 0.56
-|.. |.. |.. |.. |.. n=24 c= 0.52
-|.. |.. |.. |.. |.. |.. n=12 c= 0.46     goals = [ 3070.5, 16.2, 20.0]
-|.. |.. |.. |.. |.. |.. n=12 c= 0.38     goals = [ 3208.5, 15.8, 20.0]
-|.. |.. |.. |.. |.. n=25 c= 0.40
-|.. |.. |.. |.. |.. |.. n=12 c= 0.39     goals = [ 2245.0, 16.5, 25.0]
-|.. |.. |.. |.. |.. |.. n=13 c= 0.28     goals = [ 2634.0, 15.5, 20.0]
-|.. |.. |.. |.. n=50 c= 0.40
-|.. |.. |.. |.. |.. n=25 c= 0.32
-|.. |.. |.. |.. |.. |.. n=12 c= 0.24     goals = [ 2860.0, 15.9, 20.0]
-|.. |.. |.. |.. |.. |.. n=13 c= 0.25     goals = [ 3245.0, 16.6, 20.0]
-|.. |.. |.. |.. |.. n=25 c= 0.22
-|.. |.. |.. |.. |.. |.. n=12 c= 0.22     goals = [ 3472.5, 16.6, 20.0]
-|.. |.. |.. |.. |.. |.. n=13 c= 0.10     goals = [ 3264.0, 17.8, 20.0]
-|.. |.. |.. n=100 c= 0.52
-|.. |.. |.. |.. n=50 c= 0.29
-|.. |.. |.. |.. |.. n=25 c= 0.23
-|.. |.. |.. |.. |.. |.. n=12 c= 0.21     goals = [ 4365.0, 10.0, 10.0]
-|.. |.. |.. |.. |.. |.. n=13 c= 0.16     goals = [ 4668.0, 11.5, 10.0]
-|.. |.. |.. |.. |.. n=25 c= 0.19
-|.. |.. |.. |.. |.. |.. n=12 c= 0.15     goals = [ 3792.5, 12.0, 15.0]
-|.. |.. |.. |.. |.. |.. n=13 c= 0.14     goals = [ 4274.0, 13.0, 10.0]
-|.. |.. |.. |.. n=50 c= 0.35
-|.. |.. |.. |.. |.. n=25 c= 0.30
-|.. |.. |.. |.. |.. |.. n=12 c= 0.16     goals = [ 4110.0, 13.2, 20.0]
-|.. |.. |.. |.. |.. |.. n=13 c= 0.20     goals = [ 3725.0, 15.0, 20.0]
-|.. |.. |.. |.. |.. n=25 c= 0.20
-|.. |.. |.. |.. |.. |.. n=12 c= 0.13     goals = [ 4215.0, 13.3, 10.0]
-|.. |.. |.. |.. |.. |.. n=13 c= 0.11     goals = [ 4098.0, 14.0, 10.0]
-|.. n=398 c= 0.91
-|.. |.. n=199 c= 0.73
-|.. |.. |.. n=99 c= 0.56
-|.. |.. |.. |.. n=49 c= 0.56
-|.. |.. |.. |.. |.. n=24 c= 0.26
-|.. |.. |.. |.. |.. |.. n=12 c= 0.15     goals = [ 1985.0, 16.9, 30.0]
-|.. |.. |.. |.. |.. |.. n=12 c= 0.18     goals = [ 2283.5, 16.5, 25.0]
-|.. |.. |.. |.. |.. n=25 c= 0.46
-|.. |.. |.. |.. |.. |.. n=12 c= 0.47     goals = [ 2130.0, 15.2, 30.0]
-|.. |.. |.. |.. |.. |.. n=13 c= 0.13     goals = [ 2511.0, 15.5, 20.0]
-|.. |.. |.. |.. n=50 c= 0.34
-|.. |.. |.. |.. |.. n=25 c= 0.25
-|.. |.. |.. |.. |.. |.. n=12 c= 0.25     goals = [ 3045.0, 15.9, 25.0]
-|.. |.. |.. |.. |.. |.. n=13 c= 0.16     goals = [ 2130.0, 15.8, 40.0]
-|.. |.. |.. |.. |.. n=25 c= 0.19
-|.. |.. |.. |.. |.. |.. n=12 c= 0.17     goals = [ 1945.0, 15.4, 30.0]
-|.. |.. |.. |.. |.. |.. n=13 c= 0.13     goals = [ 2464.0, 15.5, 20.0]
-|.. |.. |.. n=100 c= 0.64
-|.. |.. |.. |.. n=50 c= 0.65
-|.. |.. |.. |.. |.. n=25 c= 0.60
-|.. |.. |.. |.. |.. |.. n=12 c= 0.59     goals = [ 2640.0, 14.6, 25.0]
-|.. |.. |.. |.. |.. |.. n=13 c= 0.14     goals = [ 2350.0, 15.0, 30.0]
-|.. |.. |.. |.. |.. n=25 c= 0.50
-|.. |.. |.. |.. |.. |.. n=12 c= 0.47     goals = [ 2052.5, 18.0, 35.0]
-|.. |.. |.. |.. |.. |.. n=13 c= 0.08     goals = [ 1995.0, 16.9, 30.0]
-|.. |.. |.. |.. n=50 c= 0.47
-|.. |.. |.. |.. |.. n=25 c= 0.45
-|.. |.. |.. |.. |.. |.. n=12 c= 0.36     goals = [ 2659.0, 16.4, 30.0]
-|.. |.. |.. |.. |.. |.. n=13 c= 0.37     goals = [ 2625.0, 16.4, 30.0]
-|.. |.. |.. |.. |.. n=25 c= 0.23
-|.. |.. |.. |.. |.. |.. n=12 c= 0.13     goals = [ 2137.5, 15.2, 30.0]
-|.. |.. |.. |.. |.. |.. n=13 c= 0.15     goals = [ 2230.0, 15.9, 30.0]
-|.. |.. n=199 c= 0.70
-|.. |.. |.. n=99 c= 0.58
-|.. |.. |.. |.. n=49 c= 0.56
-|.. |.. |.. |.. |.. n=24 c= 0.52
-|.. |.. |.. |.. |.. |.. n=12 c= 0.52     goals = [ 3061.5, 15.8, 20.0]
-|.. |.. |.. |.. |.. |.. n=12 c= 0.08     goals = [ 3199.5, 16.5, 20.0]
-|.. |.. |.. |.. |.. n=25 c= 0.40
-|.. |.. |.. |.. |.. |.. n=12 c= 0.39     goals = [ 2245.0, 16.5, 25.0]
-|.. |.. |.. |.. |.. |.. n=13 c= 0.28     goals = [ 2634.0, 15.5, 20.0]
-|.. |.. |.. |.. n=50 c= 0.40
-|.. |.. |.. |.. |.. n=25 c= 0.26
-|.. |.. |.. |.. |.. |.. n=12 c= 0.13     goals = [ 3002.5, 16.5, 20.0]
-|.. |.. |.. |.. |.. |.. n=13 c= 0.26     goals = [ 3410.0, 17.2, 20.0]
-|.. |.. |.. |.. |.. n=25 c= 0.25
-|.. |.. |.. |.. |.. |.. n=12 c= 0.24     goals = [ 3041.0, 17.1, 20.0]
-|.. |.. |.. |.. |.. |.. n=13 c= 0.08     goals = [ 3459.0, 16.9, 20.0]
-|.. |.. |.. n=100 c= 0.52
-|.. |.. |.. |.. n=50 c= 0.28
-|.. |.. |.. |.. |.. n=25 c= 0.21
-|.. |.. |.. |.. |.. |.. n=12 c= 0.19     goals = [ 4423.5, 10.5, 10.0]
-|.. |.. |.. |.. |.. |.. n=13 c= 0.15     goals = [ 4385.0, 12.0, 10.0]
-|.. |.. |.. |.. |.. n=25 c= 0.16
-|.. |.. |.. |.. |.. |.. n=12 c= 0.14     goals = [ 4328.5, 13.0, 10.0]
-|.. |.. |.. |.. |.. |.. n=13 c= 0.15     goals = [ 3693.0, 12.0, 20.0]
-|.. |.. |.. |.. n=50 c= 0.34
-|.. |.. |.. |.. |.. n=25 c= 0.22
-|.. |.. |.. |.. |.. |.. n=12 c= 0.14     goals = [ 4070.0, 13.8, 10.0]
-|.. |.. |.. |.. |.. |.. n=13 c= 0.11     goals = [ 4380.0, 13.2, 10.0]
-|.. |.. |.. |.. |.. n=25 c= 0.26
-|.. |.. |.. |.. |.. |.. n=12 c= 0.21     goals = [ 4097.5, 13.1, 20.0]
-|.. |.. |.. |.. |.. |.. n=13 c= 0.17     goals = [ 3830.0, 14.3, 20.0]
-
-Task 2:
-Weight-     Acceleration+     Mpg+     
-2052.5      18.0              35.0      <== best
-2130.0      15.8              40.0
-1985.0      16.9              30.0
-1995.0      16.9              30.0
-1945.0      15.4              30.0
-2130.0      15.2              30.0
-2137.5      15.2              30.0
-2230.0      15.9              30.0
-2350.0      15.0              30.0
-2625.0      16.4              30.0
-2659.0      16.4              30.0
-2245.0      16.5              25.0
-2283.5      16.5              25.0
-2640.0      14.6              25.0
-2464.0      15.5              20.0
-2511.0      15.5              20.0
-3045.0      15.9              25.0
-3041.0      17.1              20.0
-2634.0      15.5              20.0
-3002.5      16.5              20.0
-3199.5      16.5              20.0
-3410.0      17.2              20.0
-3061.5      15.8              20.0
-3459.0      16.9              20.0
-3830.0      14.3              20.0
-3693.0      12.0              20.0
-4097.5      13.1              20.0
-4070.0      13.8              10.0
-4328.5      13.0              10.0
-4380.0      13.2              10.0
-4385.0      12.0              10.0
-4423.5      10.5              10.0      <== worst
-
-Task 3:
-{at:1, txt:Displacement, lo:85, hi:91, best:9, rest:0}
-{at:1, txt:Displacement, lo:97, hi:400, best:3, rest:3}
-{at:1, txt:Displacement, lo:429, hi:455, best:0, rest:9}
-
-{at:2, txt:Horsepower, lo:52, hi:65, best:7, rest:0}
-{at:2, txt:Horsepower, lo:67, hi:97, best:5, rest:0}
-{at:2, txt:Horsepower, lo:167, hi:208, best:0, rest:5}
-{at:2, txt:Horsepower, lo:215, hi:230, best:0, rest:7}
-
-{at:6, txt:origin, lo:1, hi:1, best:1, rest:12}
-{at:6, txt:origin, lo:3, hi:3, best:11, rest:0}
-
-Task 4:
-Best
-best ['4', '85', '52', '2035', '22.2', '76', '1', '30']
-best ['4', '119', '97', '2545', '17', '75', '3', '20']
-best ['4', '97', '75', '2265', '18.2', '77', '3', '30']
-best ['4', '98', '68', '2135', '16.6', '78', '3', '30']
-best ['4', '85', '70', '2070', '18.6', '78', '3', '40']
-best ['4', '85', '65', '2020', '19.2', '79', '3', '30']
-
-worst ['8', '455', '225', '4951', '11', '73', '1', '10']
-worst ['8', '440', '215', '4735', '11', '73', '1', '10']
-worst ['8', '429', '198', '4952', '11.5', '73', '1', '10']
-worst ['8', '400', '230', '4278', '9.5', '73', '1', '20']
-worst ['8', '429', '208', '4633', '11', '72', '1', '10']
-worst ['8', '455', '225', '4425', '10', '70', '1', '10']
-
-"""
+import numpy as np
 
 #Based on class o by Tim Menzies
 class Bag:
@@ -234,7 +35,9 @@ def park_miller(seed,start,end):
 
 def var(items):
     n = len(items)
-    return items[ 9*(n // 10) ] - items[ 9*(n // 10) ] / 2.56
+    mean = sum(items) / n
+    deviations = [(x - mean) ** 2 for x in items]
+    return sum(deviations) / n
 
 def unsuper(data, min_break, min_size):
     data.sort(key=lambda d: d[0])
@@ -268,8 +71,8 @@ def merge(groups):
     proposal = []
     i = 0
     while i < len(groups) - 1:
-        current = [g[0] for g in groups[i]]
-        next = [g[0] for g in groups[i + 1]]
+        current = [g[1] for g in groups[i]]
+        next = [g[1] for g in groups[i + 1]]
         both = current + next
 
         n1, n2 = len(current), len(next)
@@ -289,6 +92,131 @@ def merge(groups):
         return merge(proposal)
     else:
         return groups
+
+class FFTNode:
+    def __init__(self,full_policy,surviving_data,ranges):
+        if(full_policy == None):
+            self.txt = "Last leaf"
+            self.rows = surviving_data
+            self.support = len(surviving_data)
+            self.range = None
+            self.policy = None
+            self.next = None
+        else:
+            pass_data = []
+            self.policy = full_policy[0]
+            self.rows = []
+            self.support = 0
+            if self.policy:
+                self.range = ranges[0]
+                if len(ranges) > 1:
+                    ranges = ranges[1:]
+            else:
+                self.range = ranges[-1]
+                if len(ranges) > 1:
+                    ranges = ranges[:-1]
+            self.txt = self.range['txt']
+            if self.txt[0].isupper():
+                if self.range['first']:
+                    for row in surviving_data:
+                        if row[self.range['at']] != '?' and Sample.compiler(row[self.range['at']])(row[self.range['at']]) <= self.range['hi']:
+                            self.rows.append(row)
+                            self.support += 1
+                        else:
+                            pass_data.append(row)
+                elif self.range['last']:
+                    for row in surviving_data:
+                        if  row[self.range['at']] != '?' and Sample.compiler(row[self.range['at']])(row[self.range['at']]) > self.range['lo']:
+                            self.rows.append(row)
+                            self.support += 1
+                        else:
+                            pass_data.append(row)
+                else:
+                    for row in surviving_data:
+                        if  row[self.range['at']] != '?' and self.range['lo'] <= Sample.compiler(row[self.range['at']])(row[self.range['at']]) < self.range['hi']:
+                            self.rows.append(row)
+                            self.support += 1
+                        else:
+                            pass_data.append(row)
+            else:
+                for row in surviving_data:
+                    if row[self.range['at']] != '?' and Sample.compiler(row[self.range['at']])(row[self.range['at']]) == self.range['lo']:
+                        self.rows.append(row)
+                        self.support += 1
+                    else:
+                        pass_data.append(row)
+
+            if len(full_policy) > 1:
+                full_policy = full_policy[1:]
+                self.next = FFTNode(full_policy, pass_data, ranges)
+            else:
+                self.next = FFTNode(None,pass_data,None)
+
+           
+class FFT():
+    def __init__(self, all, conf, branch,branches,stop = None, level=0):
+
+        self.my = conf
+        #stop = stop or 2*len(all.rows)**self.my.bins
+        stop = stop or 2*len(all.rows)**0.5
+        
+        bins = all.discretize()
+
+        bestIdea = None
+        worstIdea = None
+        bestValues = self.values("plan", bins)
+        worstValues = self.values("monitor", bins)
+
+        if len(bestValues)>0 and len(worstValues)>0:
+            bestIdea   = bestValues[-1][1]
+            worstIdea  = worstValues[-1][1]
+            
+            for yes,no,idea in [(1,0,bestIdea), (0,1,worstIdea)]:
+                leaf,tree = all.clone(), all.clone()
+                for row in all.rows:
+                    if self.match(idea, row):
+                        leaf + row
+                    else:
+                        tree + row
+                b1 = copy.deepcopy(branch)
+                b1 += [Bag(at=idea.at -1 , lo=idea.lo, hi=idea.hi,
+                                type=yes, txt="if "+self.show(idea)+" then with support = "+ str(len(leaf.rows)) , 
+                                then=leaf.ys(), n=len(leaf.rows))]
+                if len(tree.rows) <= stop or level > random.randrange(5,9,1):
+                    b1  += [Bag(type=no, txt="exit node support = "+ str(len(tree.rows)), then=tree.ys(), n= len(tree.rows))]
+                    branches += [b1]
+                else:
+                    FFT(tree,conf,b1,branches,stop=stop,level=level+1)
+            
+    
+    def match(self, bin, row):
+        v=row[bin.at]             
+        if   v=="?"   : return True      
+        elif bin.first: return Sample.compiler(v)(v) <= bin.hi
+        elif bin.last : return Sample.compiler(v)(v) >= bin.lo
+        else          : return bin.lo <= Sample.compiler(v)(v) <= bin.hi
+
+    def show(self,bin):
+        if   bin.lo == bin.hi: return f"{bin.txt} == {bin.lo}"  
+        elif bin.first: return f"{bin.txt} <= {bin.hi}"
+        elif bin.last : return f"{bin.txt} >= {bin.lo}"
+        else          : return f"{bin.lo} <= {bin.txt} <= {bin.hi}"
+
+    def value(self, rule, bin):
+        # s = self.my.support
+        s = 2
+        rules = Bag(plan    = lambda b,r: b**s/(b+r) if b>r else 0,  
+                monitor = lambda b,r: r**s/(b+r) if r>b else 0,  
+                novel   = lambda b,r: 1/(b+r))                   
+
+        if bin.rests == 0 or bin.bests == 0:
+            return rules[rule](bin.best, bin.rest)
+        return rules[rule](bin.best/bin.bests, bin.rest/bin.rests)
+  
+    def values(self,rule,bins):
+        bins = [(self.value(rule,bin), bin) for bin in bins]
+        tmp = [(n,bin) for n,bin in bins if n > 0]
+        return sorted(tmp, key=lambda tuple: tuple[0]) 
 
 class Sym:
     """
@@ -384,8 +312,12 @@ class Sym:
         for val in set(self.cnt.keys() | other.cnt.keys()):
             yield Bag( at = self.oid-1, txt = self.txt, lo = val, hi = val,
                     best = self.get(val),
+                    bests=self.n,
                     rest = other.get(val),
+                    rests = other.n,
                     first = False, last = False )
+    def mid(self):
+        return self.mode
 
 class Num:
     """
@@ -503,9 +435,13 @@ class Num:
             for n, r in enumerate(ranges):
                 counts = [x[1] for x in r]
                 yield Bag( at = self.oid-1, txt = self.txt, lo = r[0][0], hi = r[-1][0],
-                        best = sum(1 for x in counts if x == 1), 
+                        best = sum(1 for x in counts if x == 1),
+                        bests = self.n, 
                         rest = sum(1 for x in counts if x == 0),
+                        rests = other.n,
                         first = (n == 0), last = (n == len(ranges)))
+    def mid(self):
+        return round(self.mu, 1)
 
 class Col:
     """
@@ -543,6 +479,8 @@ class Col:
 
     def discretize(self, other):
         return self.obj.discretize(other.obj)
+    def mid(self):
+        return self.obj.mid()
 
 class Sample:
     """
@@ -967,8 +905,7 @@ class Sample:
         new_list = [[i,x] for i,x in enumerate(repr)]
         self.idxQuickSort(new_list, 0, len(new_list)-1)
         ordered_groups = [groups[i] for i, _ in new_list]
-        # Fourth, if verbose, we show the results
-        self._print_groups(ordered_groups)
+        # self._print_groups(ordered_groups)
 
         return ordered_groups
 
@@ -1025,9 +962,9 @@ class Sample:
             new = self.clone()
             for row in rows:
                 new + row
-            self._print_leaf(rows, level)
+            # self._print_leaf(rows, level)
             return [new]
-        self._print_node(rows, level)
+        # self._print_node(rows, level)
         east, west = self.div1(rows)
         east = self._divs(east, level + 1, min_leaf_size)
         west = self._divs(west, level + 1, min_leaf_size)
@@ -1088,9 +1025,9 @@ class Sample:
             for res in best.cols[good-1].discretize(worst.cols[bad-1]):
                 range += [res]
             if len(range) > 0:
-                feature_ranges += [range]
+                feature_ranges += range
         
-        self._show_discretized_ranges(feature_ranges, best, worst)
+        # self._show_discretized_ranges(feature_ranges, best, worst)
 
         return feature_ranges
         
@@ -1118,17 +1055,29 @@ class Sample:
     def norm_c(self, rows):
         return self.calc_c(rows) / self.calc_c(self.rows)
 
+    def ys(self):
+        return [self.cols[goal-1].mid() for goal in self.y]
+
 
 def main():
-    lines = Sample.read("sin21/data/auto93.csv")
+    lines = Sample.read("data/auto93.csv")
     sample = Sample(0)
     ls = sample.linemaker(lines)
     for l in ls:
         sample + l
-
-    g = sample.divs()
-    # sample.dump()
-    sample.discretize()
+    branches = []
+    branch1 = []
+    # ranges = sample.discretize()
+    # ranked_ranges = sorted(sorted(ranges,key=lambda x: x['rest']), key=lambda x: x['best'], reverse=True)
+    # fft = FFTNode([0,0,0,1], sample.rows, ranked_ranges)
+    fft = FFT(sample, None, branch1, branches)
+    for i, branch in enumerate(branches):
+        print("FFT", i)
+        for b in branch:
+            print(b.txt)
+        print()
+    a = 2
+        
 
 
     
