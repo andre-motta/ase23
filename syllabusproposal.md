@@ -1,5 +1,6 @@
 # Syllabus Proposal
-
+The remaining of the syllabus and class organization is really good as is, following are some update suggestions for the class.
+I opted to not copy the entire syllabus and instead only post my suggestions for the sake of clarity when reading.
 
 
 ## Prerequisites
