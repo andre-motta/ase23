@@ -27,4 +27,4 @@ I believe that when reaching Fairness and discussing fairness metrics a simple f
 
 ## Project:
 
-I think a draft would be interesting as a mid-point. We need to start working on the project on the date where the midterm is and halfway through we need to show something. Maybe a 2 page draft with the main points and ideas of what you want to explore together with some basic literature review.
+I think a draft would be interesting as a mid-point. We need to start working on the project on the date where the midterm is and halfway through we need to show something. Maybe a 2 page draft with the main points and ideas of what you want to explore together with some basic literature review..
